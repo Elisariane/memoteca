@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -8,20 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ListarPensamentoComponent implements OnInit {
 
-  listaPensamentos  = [
-    {
-      id: '1',
-      conteudo: 'Aprendendo Angular a',
-      autoria: 'Dev Lisa',
-      modelo: 'modelo3'
-    },
-    {
-      id: '1',
-      conteudo: 'Aprendendo Angular asasa',
-      autoria: 'Dev Lisa',
-      modelo: 'modelo3'
-    },
-  ];
+  listaPensamentos: Pensamento[]  = [];
   constructor() { }
 
   ngOnInit(): void {
